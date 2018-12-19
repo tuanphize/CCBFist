@@ -23,17 +23,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class NewMBTest {
  
  @FindBy(css="#username")
- WebElement userName;
+ public WebElement userName;
  @FindBy(css="#password")
- WebElement passWord;
+ public WebElement passWord;
  @FindBy(css="#btnLogin")
- WebElement dangNhap;
+ public WebElement dangNhap;
  @FindBy(css="#btnAdd")
- WebElement btnAdd;
+ public WebElement btnAdd;
  @FindBy(xpath="/html[1]/body[1]/section[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]")
- WebElement txtHoten;
+ public WebElement txtHoten;
  @FindBy(xpath="/html[1]/body[1]/section[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]")
- WebElement cbbGioiTinh;
+ public WebElement cbbGioiTinh;
   
  public NewMBTest(WebDriver driver) {
 	

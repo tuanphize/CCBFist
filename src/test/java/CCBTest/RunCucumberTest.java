@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features= {"src\\test\\resources\\CCBTest\\newmb.feature",
-				   "src\\test\\resources\\CucumberTest\\Subscription.feature"},
+		features= {"src\\test\\resources\\Viettel\\newus.feature"
+				  },
 		//set output to html file
 		plugin = {"pretty", "html:target/HtmlReports" },
 		//indicate the package contain step definition
