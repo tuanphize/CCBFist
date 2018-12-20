@@ -33,11 +33,20 @@ public class NewMBTest {
  public WebElement btnAdd;
  @FindBy(css="#txtHoTen_ThemMoi")
  public WebElement txtHoten;
- @FindBy(css="#select2-slGioiTinh_ThemMoi-container")
- public Select cbbGioiTinh;
-  
+ //@FindBy(id="slGioiTinh_ThemMoi")
+ //public Select cbbGioiTinh;
+ @FindBy(css="#txtNgaySinh_ThemMoi")
+ public WebElement txtNgaySinh;
+ @FindBy(css="#txtTenMe_ThemMoi")
+ public WebElement txtTenMe;
+ @FindBy(css="#txtDienThoaiMe_ThemMoi")
+ public WebElement txtSDTMe;
+ @FindBy(css="#btnSave2")
+ public WebElement btnSave;
+ @FindBy(css="body.stickyheader.leftpanel-collapsed:nth-child(5) div.bottom-right:nth-child(22) div.gritter-item-wrapper.growl-success div.gritter-item div.gritter-without-image:nth-child(2) > p:nth-child(2)")	
+ public WebElement msgPass;
  public NewMBTest(WebDriver driver) {
-	
+ 
 	PageFactory.initElements(driver,this);
 			
 }

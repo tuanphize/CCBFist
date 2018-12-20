@@ -13,6 +13,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,7 +34,7 @@ public class NewMBStep {
 	@Before
 	public void StartTest() {
 		newMB = new NewMBTest(driver);
-
+		
 	}
 
 	@After
@@ -53,6 +55,8 @@ public class NewMBStep {
 		newMB.passWord.sendKeys("123456a@Xa");
 		newMB.dangNhap.click();
 		
+		
+		
 	}
 
 	@Given("^Im staying on homepage$")
@@ -70,21 +74,28 @@ public class NewMBStep {
 
 	@When("^I input \"([^\"]*)\"$")
 	public void i_input(String arg1) throws Exception {
-		newMB.txtHoten.sendKeys("TUANXOAN123");
+		newMB.txtHoten.sendKeys("0UAXOAN1234");
 		// Write code here that turns the phrase above into concrete actions
 		
 	}
 
 	@When("^select \"([^\"]*)\"$")
 	public void select(String arg1) throws Exception {
-		Thread.sleep(4000);
-		 newMB.cbbGioiTinh.selectByValue("Nam");
+		JavascriptExecutor js=(JavascriptExecutor) driver;
+		 Select cbbGioiTinh=new Select(driver.findElement(By.id("slGioiTinh_ThemMoi")));
+		 cbbGioiTinh.selectByVisibleText("Nam");
+		 newMB.txtNgaySinh.sendKeys("20112018");
+		 newMB.txtNgaySinh.sendKeys(Keys.RETURN);
+		 js.executeScript("window.scrollTo(0,3000)");
+		 newMB.txtTenMe.sendKeys("Nguyen Thi Dam");
+		 newMB.txtSDTMe.sendKeys("123456789");
 		// Write code here that turns the phrase above into concrete actions
 		 
 	}
-
+    
 	@When("^i click button \"([^\"]*)\"$")
 	public void i_click_button(String arg1) throws Exception {
+		newMB.btnSave.click();
 		// Write code here that turns the phrase above into concrete actions
 		
 	}
@@ -92,7 +103,10 @@ public class NewMBStep {
 	@Then("^I should see the notification message \"([^\"]*)\"$")
 	public void i_should_see_the_notification_message(String arg1) throws Exception {
 		// Write code here that turns the phrase above into concrete actions
+		Thread.sleep(3000);
 		
+		assertEquals(newMB.msgPass.getText(),"Thêm mới đối tượng thành công");
+		System.out.println(driver.getPageSource());
 	}
 
 }
