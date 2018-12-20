@@ -6,8 +6,8 @@ Scenario: show valid message when input valid information
     Given Im logging in the web
     And  Im staying on homepage
     And Click button "Thêm mới"
-    When I input "Họ tên đối tượng"
-    And select "chọn giới tính"
+    When I input "TuanXoan11"
+    And select "Nam"
     And select "ngày tháng năm sinh"
     And select "Họ tên mẹ"
     And select "Số điện thoại"

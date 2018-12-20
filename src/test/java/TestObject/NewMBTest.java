@@ -18,6 +18,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class NewMBTest {
@@ -30,10 +31,10 @@ public class NewMBTest {
  public WebElement dangNhap;
  @FindBy(css="#btnAdd")
  public WebElement btnAdd;
- @FindBy(xpath="/html[1]/body[1]/section[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]")
+ @FindBy(css="#txtHoTen_ThemMoi")
  public WebElement txtHoten;
- @FindBy(xpath="/html[1]/body[1]/section[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/input[1]")
- public WebElement cbbGioiTinh;
+ @FindBy(css="#select2-slGioiTinh_ThemMoi-container")
+ public Select cbbGioiTinh;
   
  public NewMBTest(WebDriver driver) {
 	
