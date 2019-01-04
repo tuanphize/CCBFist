@@ -33,7 +33,7 @@ public class NewMBTest {
  public WebElement btnAdd;
  @FindBy(css="#txtHoTen_ThemMoi")
  public WebElement txtHoten;
- //@FindBy(id="slGioiTinh_ThemMoi")
+// @FindBy(css="#slGioiTinh_ThemMoi")
  //public Select cbbGioiTinh;
  @FindBy(css="#txtNgaySinh_ThemMoi")
  public WebElement txtNgaySinh;
@@ -43,8 +43,28 @@ public class NewMBTest {
  public WebElement txtSDTMe;
  @FindBy(css="#btnSave2")
  public WebElement btnSave;
- @FindBy(css="body.stickyheader.leftpanel-collapsed:nth-child(5) div.bottom-right:nth-child(22) div.gritter-item-wrapper.growl-success div.gritter-item div.gritter-without-image:nth-child(2) > p:nth-child(2)")	
+ @FindBy(css="div.gritter-without-image>span")	
  public WebElement msgPass;
+ //new
+ 
+ @FindBy(css="div.footer:nth-child(6) div.container div:nth-child(1) div.subscription.col-sm-6 div.mod-input div.col-sm-9:nth-child(1) > input:nth-child(1)")
+	public WebElement txtEmail;
+	@FindBy(css="div.footer:nth-child(6) div.container div:nth-child(1) div.subscription.col-sm-6 div.mod-input div.col-sm-3:nth-child(2) > button.next-btn-primary")
+	public WebElement txtbtnO;
+	@FindBy(css="#fullname")
+	public WebElement txtName;
+	@FindBy(css="#allow-button")
+	public WebElement txtbtnI;
+	@FindBy(css="body:nth-child(2) div.login-form div.row:nth-child(3) > input:nth-child(1)")
+	public WebElement txtUsername;
+	@FindBy(css="body:nth-child(2) div.login-form div.row:nth-child(4) > input:nth-child(1)")
+	public WebElement txtPassword;
+	@FindBy(css="body:nth-child(2) div.login-form div.row-command:nth-child(6) > button.btn-primary.btn-login:nth-child(2)")
+	public WebElement btnAdminLG;
+	@FindBy(css="div.page-wapper:nth-child(1) aside.main-sidebar ul.sidebar-menu.tree:nth-child(4) li.treeview:nth-child(2) a:nth-child(1) > span:nth-child(2)")
+	public WebElement btnDkyNT;
+	@FindBy(css="div.page-wapper:nth-child(1) div.content-wrapper div.content table.table.table-hover.table-bordered tbody:nth-child(2) tr:nth-child(3) td.cl-status:nth-child(6) > i.fa.fa-remove")
+	public WebElement sttSuccess;
  public NewMBTest(WebDriver driver) {
  
 	PageFactory.initElements(driver,this);

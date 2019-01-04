@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features= {"src\\test\\resources\\Viettel\\newus.feature"
+		features= {"src\\test\\resources\\Viettel\\Status.feature"
 				  },
 		//set output to html file
 		plugin = {"pretty", "html:target/HtmlReports" },
@@ -16,5 +16,6 @@ import org.junit.runner.RunWith;
 		glue = "StepDefinitionS", 
 		//config to readable console
 		monochrome=true)
+
 public class RunCucumberTest {
 }
