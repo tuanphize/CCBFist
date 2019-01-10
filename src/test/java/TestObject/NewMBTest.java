@@ -65,6 +65,12 @@ public class NewMBTest {
 	public WebElement btnDkyNT;
 	@FindBy(css="div.page-wapper:nth-child(1) div.content-wrapper div.content table.table.table-hover.table-bordered tbody:nth-child(2) tr:nth-child(3) td.cl-status:nth-child(6) > i.fa.fa-remove")
 	public WebElement sttSuccess;
+	@FindBy(css="div.page-wapper:nth-child(1) aside.main-sidebar ul.sidebar-menu.tree:nth-child(4) li:nth-child(4) a:nth-child(1) > span:nth-child(2)")
+	public WebElement btnCreateNews;
+	@FindBy(css="div.page-wapper:nth-child(1) div.content-wrapper div.content:nth-child(3) div.create-news div:nth-child(16) div:nth-child(2) span.btn.btn-sm.btn-default.btn-upload > input.attachment-select")
+	public WebElement btnAddFile;
+	@FindBy(css="div.page-wapper:nth-child(1) div.content-wrapper div.content:nth-child(3) div.create-news div.list-files:nth-child(1) table:nth-child(1) tbody:nth-child(1) tr:nth-child(1) > td.file-name")
+	public WebElement txtUploadFile;
  public NewMBTest(WebDriver driver) {
  
 	PageFactory.initElements(driver,this);

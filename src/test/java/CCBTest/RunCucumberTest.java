@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features= {"src\\test\\resources\\Viettel\\Status.feature"
+		features= {"src\\test\\resources\\US-BE0501\\file.feature"
 				  },
 		//set output to html file
 		plugin = {"pretty", "html:target/HtmlReports" },
