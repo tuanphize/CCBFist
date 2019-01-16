@@ -71,6 +71,21 @@ public class NewMBTest {
 	public WebElement btnAddFile;
 	@FindBy(css="div.page-wapper:nth-child(1) div.content-wrapper div.content:nth-child(3) div.create-news div.list-files:nth-child(1) table:nth-child(1) tbody:nth-child(1) tr:nth-child(1) > td.file-name")
 	public WebElement txtUploadFile;
+	//mandatoryfield
+	@FindBy(css="#ddlGroup")
+	public WebElement groupCBB;
+	@FindBy(css="div.page-wapper:nth-child(1) div.content-wrapper div.content:nth-child(3) div.create-news div:nth-child(3) div.btn-group.open ul.dropdown-menu li:nth-child(2) > a:nth-child(1)")
+	public WebElement groupchoose;
+	@FindBy(css="#txtName")
+	public WebElement txtNameM;
+	@FindBy(css="#txtSubject")
+	public WebElement txtSubjectM;
+	@FindBy(css="div.page-wapper:nth-child(1) div.content-wrapper div.content:nth-child(3) div.create-news div:nth-child(13) div.note-editor.note-frame.panel.panel-default div.note-editing-area:nth-child(3) > div.note-editable.panel-body")
+	public WebElement txtBodyM;
+	@FindBy(css="div.page-wapper:nth-child(1) div.content-wrapper div.content:nth-child(3) div:nth-child(2) div.create-news div:nth-child(17) > button.btn.btn-sm.btn-primary.btn-next")
+	public WebElement btnNextM;
+	@FindBy(css="div.page-wapper:nth-child(1) div.content-wrapper div.content:nth-child(3) div.row:nth-child(1) div.col-sm-6.tab-item.tab-active:nth-child(2) div.row > div.col-sm-2.tab-number")
+	public WebElement txtnextstepM;
  public NewMBTest(WebDriver driver) {
  
 	PageFactory.initElements(driver,this);

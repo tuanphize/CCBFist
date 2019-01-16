@@ -11,6 +11,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 
+import java.awt.List;
 import java.awt.Robot;
 import java.awt.Window;
 import java.awt.event.KeyEvent;
@@ -138,4 +139,62 @@ public class NewMBStep {
 			 assertTrue(newMB.txtUploadFile.getText().contains("tes"));
 				
 		}
+		
+		
+		//Mandatory Field
+		@Given("^Im in the creates new pages$")
+		public void im_in_the_creates_new_pages() throws Exception {
+			 driver.get("http://testmaster.vn/Account/Login?ReturnUrl=%2fadmin");
+			 driver.manage().window().maximize();
+			 driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+			 newMB.txtUsername.sendKeys("khanh.tx@live.com");
+			 newMB.txtPassword.sendKeys("abc123");
+			 newMB.btnAdminLG.click();
+			 newMB.btnCreateNews.click();
+		    // Write code here that turns the phrase above into concrete actions
+		 
+		}
+
+		@When("^I select group$")
+		public void i_select_group() throws Exception {
+			/*String value="0";
+			WebElement dropdown= driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/button[1]"));
+			dropdown.click(); // assuming you have to click the "dropdown" to open it
+			dropdown.findElement(By.cssSelector("li[value=" + value + "]")).click();
+			*/
+			}
+			
+			//phần này em chưa chạy được vì thầy code combobox trên web nhưng lại không để thẻ là select
+		    // Write code here that turns the phrase above into concrete actions
+		   
+		
+
+		@When("^choose name$")
+		public void choose_name() throws Exception {
+		    // Write code here that turns the phrase above into concrete actions
+		 newMB.txtNameM.sendKeys("a");
+		}
+
+		@When("^choose subject$")
+		public void choose_subject() throws Exception {
+		    // Write code here that turns the phrase above into concrete actions
+		 newMB.txtSubjectM.sendKeys("a");
+		}
+
+		@When("^I choose body$")
+		public void i_choose_body() throws Exception {
+		    // Write code here that turns the phrase above into concrete actions
+		   newMB.txtBodyM.sendKeys("a");
+		}
+
+		@Then("^i can move to sendnew pages$")
+		public void i_can_move_to_sendnew_pages() throws Exception {
+		    // Write code here that turns the phrase above into concrete actions
+			JavascriptExecutor js =(JavascriptExecutor) this.driver;
+			   js.executeScript("window.scrollTo(0,3000)");
+			   newMB.btnNextM.click();
+			   assertEquals("2",newMB.txtnextstepM.getText());
+		}
+
+
 }

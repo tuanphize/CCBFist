@@ -1,6 +1,6 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/US-BE0501/file.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/USBE05/MandatoryField.feature");
 formatter.feature({
-  "name": "As a tool manager, I want ability add attachment file to News item, so that I can delivery it along with News",
+  "name": "Group, Name, Subject and Body are mandatory information",
   "description": "",
   "keyword": "Feature",
   "tags": [
@@ -10,7 +10,7 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "The file can be uploaded is document file such as pdf, doc*, xls* and has max length is 2MB",
+  "name": "Show page two when i submit mandatory information",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -29,41 +29,61 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "Im staying on create news page",
+  "name": "Im in the creates new pages",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "NewMBStep.im_staying_on_create_news_page()"
+  "location": "NewMBStep.im_in_the_creates_new_pages()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I click button add file",
+  "name": "I select group",
   "keyword": "When "
 });
 formatter.match({
-  "location": "NewMBStep.i_click_button_add_file()"
+  "location": "NewMBStep.i_select_group()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "choose file pdf smaller than two mb",
+  "name": "choose name",
   "keyword": "And "
 });
 formatter.match({
-  "location": "NewMBStep.choose_file_pdf_smaller_than_two_mb()"
+  "location": "NewMBStep.choose_name()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I should see the sticker succesfully added",
+  "name": "choose subject",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "NewMBStep.choose_subject()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I choose body",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "NewMBStep.i_choose_body()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "i can move to sendnew pages",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "NewMBStep.i_should_see_the_sticker_succesfully_added()"
+  "location": "NewMBStep.i_can_move_to_sendnew_pages()"
 });
 formatter.result({
   "status": "passed"
